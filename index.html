@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funny Fuzz TV 🐻🐰🐱 - Funny Cartoons for Kids!</title>
+<meta name="description" content="Watch the funniest cartoon animal adventures! Bear, Bunny & Cat in hilarious funny cartoon videos for kids. New cartoons every week!">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root { --yellow:#FFD700; --orange:#FF6B00; --red:#FF3D3D; --dark:#1A1A2E; }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:#FFF9E6;overflow-x:hidden}
+
+.floater{position:fixed;pointer-events:none;z-index:0;font-size:1.5rem;opacity:.12;animation:floatUp linear infinite}
+@keyframes floatUp{0%{transform:translateY(110vh) rotate(0);opacity:0}10%{opacity:.12}90%{opacity:.12}100%{transform:translateY(-10vh) rotate(360deg);opacity:0}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(135deg,var(--orange),var(--yellow));height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 24px rgba(255,107,0,.35)}
+.nav-logo{font-family:'Fredoka One',cursive;font-size:1.7rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px;text-shadow:2px 2px 0 rgba(0,0,0,.18)}
+.nb{display:inline-block;animation:nb 1.6s ease-in-out infinite}
+.nb:nth-child(2){animation-delay:.2s}.nb:nth-child(3){animation-delay:.4s}
+@keyframes nb{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.nav-links{display:flex;gap:8px;list-style:none}
+.nav-links a{text-decoration:none;font-family:'Fredoka One',cursive;font-size:.95rem;color:#fff;background:rgba(255,255,255,.18);padding:8px 18px;border-radius:30px;border:2px solid rgba(255,255,255,.3);transition:all .3s}
+.nav-links a:hover{background:#fff;color:var(--orange);transform:translateY(-3px) scale(1.05)}
+.nav-sub{background:var(--red)!important;border-color:transparent!important;animation:subP 2s infinite}
+@keyframes subP{0%,100%{box-shadow:0 0 0 0 rgba(255,61,61,.4)}50%{box-shadow:0 0 0 8px rgba(255,61,61,0)}}
+@media(max-width:768px){.nav-links{display:none}}
+
+/* HERO */
+.hero{min-height:100vh;padding-top:68px;background:linear-gradient(160deg,#FF6B00 0%,#FFD700 45%,#FF8C42 75%,#FFEB3B 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hblob{position:absolute;border-radius:50%;background:rgba(255,255,255,.07);animation:bP 7s ease-in-out infinite}
+.hb1{width:500px;height:500px;top:-150px;right:-100px}
+.hb2{width:320px;height:320px;bottom:-80px;left:-60px;animation-delay:2s}
+@keyframes bP{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.cp{position:absolute;width:11px;height:11px;border-radius:3px;animation:cF linear infinite}
+@keyframes cF{0%{transform:translateY(-20px) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:40px 20px}
+.hero-emojis{font-size:clamp(3.5rem,9vw,7rem);display:flex;justify-content:center;gap:16px;margin-bottom:18px}
+.hero-emojis span{display:inline-block;filter:drop-shadow(0 8px 16px rgba(0,0,0,.2));animation:hB 1.8s ease-in-out infinite;transition:transform .3s}
+.hero-emojis span:hover{transform:scale(1.3) rotate(12deg)!important}
+.hero-emojis span:nth-child(2){animation-delay:.3s}.hero-emojis span:nth-child(3){animation-delay:.6s}
+@keyframes hB{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-22px) rotate(4deg)}}
+.hero-title{font-family:'Fredoka One',cursive;font-size:clamp(3rem,9vw,7rem);color:#fff;line-height:1;text-shadow:5px 5px 0 rgba(255,61,61,.5),10px 10px 0 rgba(0,0,0,.12);margin-bottom:14px;animation:tP .8s cubic-bezier(.34,1.56,.64,1) both}
+.hl{color:#fff176}
+@keyframes tP{0%{transform:scale(0) rotate(-10deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}
+.hero-tag{font-size:clamp(.9rem,2.5vw,1.5rem);font-weight:900;color:rgba(255,255,255,.93);letter-spacing:4px;text-transform:uppercase;margin-bottom:28px;animation:fU .8s ease .3s both}
+@keyframes fU{0%{transform:translateY(28px);opacity:0}100%{transform:translateY(0);opacity:1}}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fU .8s ease .5s both}
+.btn-w{background:var(--red);color:#fff;font-family:'Fredoka One',cursive;font-size:1.25rem;padding:15px 34px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(255,61,61,.45);transition:all .3s}
+.btn-w:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 16px 36px rgba(255,61,61,.55)}
+.btn-y{background:#fff;color:var(--orange);font-family:'Fredoka One',cursive;font-size:1.25rem;padding:15px 34px;border-radius:50px;text-decoration:none;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.12);transition:all .3s}
+.btn-y:hover{transform:translateY(-5px) scale(1.05);background:var(--yellow)}
+.hero-stats{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:36px;animation:fU .8s ease .7s both}
+.stat{background:rgba(255,255,255,.2);backdrop-filter:blur(10px);border:2px solid rgba(255,255,255,.35);border-radius:20px;padding:14px 22px;text-align:center;color:#fff;min-width:110px}
+.stat-n{font-family:'Fredoka One',cursive;font-size:1.8rem;display:block}
+.stat-l{font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;opacity:.9}
+
+/* WAVE */
+.wave{width:100%;overflow:hidden;line-height:0;margin-top:-2px}
+.wave svg{display:block}
+
+/* SECTION */
+.section{padding:80px 5%}
+.sec-title{font-family:'Fredoka One',cursive;font-size:clamp(1.8rem,4.5vw,3rem);text-align:center;color:var(--orange);margin-bottom:10px;display:block;position:relative}
+.sec-title::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:80px;height:5px;border-radius:10px;background:linear-gradient(90deg,var(--orange),var(--yellow))}
+.sec-sub{text-align:center;color:#888;font-size:1rem;font-weight:700;margin:24px 0 44px}
+
+/* VIDEOS */
+.videos-section{background:linear-gradient(180deg,#FFF9E6 0%,#FFF3CC 100%)}
+.videos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;max-width:1200px;margin:0 auto}
+
+/* VIDEO CARD */
+.video-card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.09);transition:all .4s cubic-bezier(.34,1.56,.64,1)}
+.video-card:hover{transform:translateY(-12px) scale(1.02);box-shadow:0 24px 56px rgba(0,0,0,.15)}
+.yt-thumb{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:#000;cursor:pointer}
+.yt-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.video-card:hover .yt-thumb img{transform:scale(1.05)}
+.play-overlay{position:absolute;inset:0;background:rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.video-card:hover .play-overlay{opacity:1}
+.play-circle{width:68px;height:68px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 6px 24px rgba(0,0,0,.3);transform:scale(.8);transition:transform .3s}
+.video-card:hover .play-circle{transform:scale(1)}
+.vbadge{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-family:'Fredoka One',cursive;font-size:.72rem;padding:4px 12px;border-radius:20px;letter-spacing:1px}
+.yt-iframe{display:none;width:100%;aspect-ratio:16/9;border:none}
+.video-info{padding:16px 20px 20px}
+.video-title{font-family:'Fredoka One',cursive;font-size:1.05rem;color:#333;margin-bottom:10px;line-height:1.35}
+.video-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.vtag{background:#f3f3f3;color:#666;font-size:.75rem;font-weight:800;padding:4px 12px;border-radius:12px}
+.vtag.red{background:#fff0f0;color:var(--red)}
+.vtag.orange{background:#fff4e6;color:var(--orange)}
+
+/* ADD VIDEO BOX */
+.add-box{max-width:700px;margin:40px auto 0;background:#fff;border-radius:20px;padding:24px 28px;border:2px dashed var(--orange);text-align:center}
+.add-box h3{font-family:'Fredoka One',cursive;color:var(--orange);font-size:1.2rem;margin-bottom:10px}
+.add-box p{color:#888;font-size:.9rem;font-weight:700;line-height:1.8}
+.add-box code{background:#fff4e6;color:var(--orange);padding:3px 10px;border-radius:8px;font-size:.85rem;display:inline-block;margin:3px 2px}
+
+/* FEATURES */
+.feat-section{background:linear-gradient(135deg,var(--orange) 0%,var(--yellow) 100%);padding:80px 5%}
+.feat-section .sec-title{color:#fff}
+.feat-section .sec-title::after{background:rgba(255,255,255,.5)}
+.feat-section .sec-sub{color:rgba(255,255,255,.85)}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.feat-card{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:2px solid rgba(255,255,255,.3);border-radius:24px;padding:28px 20px;text-align:center;color:#fff;transition:all .3s}
+.feat-card:hover{transform:translateY(-10px);background:rgba(255,255,255,.25)}
+.feat-icon{font-size:2.8rem;margin-bottom:12px;display:block}
+.feat-title{font-family:'Fredoka One',cursive;font-size:1.25rem;margin-bottom:8px}
+.feat-desc{font-size:.88rem;opacity:.92;font-weight:700;line-height:1.55}
+
+/* STATS BAR */
+.stats-bar{background:var(--dark);padding:40px 5%;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.stats-bar .stat{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
+.stats-bar .stat-n{color:var(--yellow)}
+.stats-bar .stat-l{color:rgba(255,255,255,.6)}
+
+/* SUBSCRIBE */
+.sub-band{background:#fff;padding:80px 5%;text-align:center;position:relative;overflow:hidden}
+.sub-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,107,0,.06) 0%,transparent 70%)}
+.sub-animals{font-size:3.5rem;display:flex;justify-content:center;gap:14px;margin-bottom:16px}
+.sub-animals span{display:inline-block;animation:dance 1.2s ease-in-out infinite}
+.sub-animals span:nth-child(2){animation-delay:.2s}.sub-animals span:nth-child(3){animation-delay:.4s}
+@keyframes dance{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(8deg) translateY(-14px)}}
+.sub-title{font-family:'Fredoka One',cursive;font-size:clamp(1.8rem,5vw,3.5rem);color:var(--orange);margin-bottom:12px}
+.sub-desc{font-size:1.05rem;color:#888;font-weight:700;max-width:480px;margin:0 auto 32px}
+.sub-btn{display:inline-flex;align-items:center;gap:12px;background:var(--red);color:#fff;font-family:'Fredoka One',cursive;font-size:1.6rem;padding:18px 46px;border-radius:60px;text-decoration:none;box-shadow:0 10px 36px rgba(255,61,61,.45);animation:bPulse 2s ease-in-out infinite;transition:all .3s}
+.sub-btn:hover{transform:scale(1.07) translateY(-5px);box-shadow:0 20px 54px rgba(255,61,61,.55)}
+@keyframes bPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.bell{animation:bellR 1s ease-in-out infinite;display:inline-block}
+@keyframes bellR{0%,100%{transform:rotate(0)}25%{transform:rotate(18deg)}75%{transform:rotate(-18deg)}}
+
+/* FOOTER */
+footer{background:#111827;padding:50px 5% 30px;color:#fff;text-align:center}
+.f-logo{font-family:'Fredoka One',cursive;font-size:2.2rem;color:var(--yellow);margin-bottom:6px}
+.f-tag{color:rgba(255,255,255,.4);font-size:.82rem;font-weight:700;letter-spacing:3px;margin-bottom:28px}
+.f-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.f-links a{color:rgba(255,255,255,.55);text-decoration:none;font-weight:700;font-size:.88rem;padding:8px 16px;border-radius:20px;background:rgba(255,255,255,.05);transition:all .3s}
+.f-links a:hover{color:var(--yellow);background:rgba(255,215,0,.1)}
+.f-copy{color:rgba(255,255,255,.25);font-size:.78rem;font-weight:700}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.34,1.56,.64,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<div class="floater" style="left:4%;animation-duration:9s">⭐</div>
+<div class="floater" style="left:18%;animation-duration:13s;animation-delay:2s">🌟</div>
+<div class="floater" style="left:35%;animation-duration:10s;animation-delay:1s">✨</div>
+<div class="floater" style="left:52%;animation-duration:12s;animation-delay:3s">💫</div>
+<div class="floater" style="left:68%;animation-duration:11s;animation-delay:.5s">⭐</div>
+<div class="floater" style="left:83%;animation-duration:14s;animation-delay:4s">🌟</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="nb">🐻</span><span class="nb">🐰</span><span class="nb">🐱</span>
+    Funny Fuzz TV
+  </a>
+  <ul class="nav-links">
+    <li><a href="#videos">🎬 Videos</a></li>
+    <li><a href="#features">⭐ Why Us</a></li>
+    <li><a href="https://youtube.com/@FunnyFuzzTV" target="_blank" class="nav-sub">🔔 Subscribe!</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hblob hb1"></div>
+  <div class="hblob hb2"></div>
+  <div class="cp" style="left:5%;background:#FF6B6B;animation-duration:4s"></div>
+  <div class="cp" style="left:15%;background:#FFD700;animation-duration:3.2s;animation-delay:.5s;border-radius:50%"></div>
+  <div class="cp" style="left:28%;background:#6BCB77;animation-duration:5s;animation-delay:1s"></div>
+  <div class="cp" style="left:44%;background:#4D96FF;animation-duration:3.7s;animation-delay:.3s;border-radius:50%"></div>
+  <div class="cp" style="left:60%;background:#FF6B00;animation-duration:4.4s;animation-delay:.8s"></div>
+  <div class="cp" style="left:75%;background:#FF1744;animation-duration:3.9s;animation-delay:1.2s;border-radius:50%"></div>
+  <div class="cp" style="left:88%;background:#FFD700;animation-duration:4.1s;animation-delay:.2s"></div>
+
+  <div class="hero-inner">
+    <div class="hero-emojis"><span>🐻</span><span>🐰</span><span>🐱</span></div>
+    <h1 class="hero-title">Funny <span class="hl">Fuzz</span> TV</h1>
+    <p class="hero-tag">The Funniest Cartoon Animals on the Internet!</p>
+    <div class="hero-btns">
+      <a href="#videos" class="btn-w">▶️ Watch Now!</a>
+      <a href="https://youtube.com/@FunnyFuzzTV" target="_blank" class="btn-y">🔔 Subscribe Free!</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">🎬</span><span class="stat-l">New Videos</span></div>
+      <div class="stat"><span class="stat-n">😂</span><span class="stat-l">100% Funny</span></div>
+      <div class="stat"><span class="stat-n">🌍</span><span class="stat-l">Worldwide</span></div>
+      <div class="stat"><span class="stat-n">🛡️</span><span class="stat-l">Kids Safe</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wave">
+  <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#FFF9E6" d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"/>
+  </svg>
+</div>
+
+<!-- VIDEOS -->
+<section class="section videos-section" id="videos">
+  <span class="sec-title">Watch Our Videos! 🎬</span>
+  <p class="sec-sub">Click any video to watch right here! New cartoons every week 🐾</p>
+
+  <div class="videos-grid">
+
+    <!-- ════════════════════════════════════════
+         ✅ VIDEO 1 — TNbgYsMJXb4
+         Naya video add karne ke liye:
+         Ye poora block copy karo
+         Aur VIDEO_ID replace karo!
+    ════════════════════════════════════════ -->
+    <div class="video-card reveal">
+      <div class="yt-thumb" onclick="playVideo(this,'TNbgYsMJXb4')">
+        <img src="https://img.youtube.com/vi/TNbgYsMJXb4/maxresdefault.jpg"
+             onerror="this.src='https://img.youtube.com/vi/TNbgYsMJXb4/hqdefault.jpg'"
+             alt="Rainy Day Chaos - Funny Fuzz TV">
+        <div class="play-overlay"><div class="play-circle">▶️</div></div>
+        <div class="vbadge">🔥 LATEST</div>
+      </div>
+      <iframe class="yt-iframe" allowfullscreen
+        allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture">
+      </iframe>
+      <div class="video-info">
+        <div class="video-title">Bear Gets Caught in the Rain! 🌧️😂</div>
+        <div class="video-meta">
+          <span class="vtag red">🔥 New!</span>
+          <span class="vtag orange">⏱ ~1 min</span>
+          <span class="vtag">😂 Funny</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+    ➕ NAYA VIDEO ADD KARNE KE LIYE:
+    Upar wala poora BLOCK copy karo
+    Ye 3 jagah VIDEO_ID replace karo:
+    1. onclick="playVideo(this,'VIDEO_ID')"
+    2. src="...vi/VIDEO_ID/maxresdefault.jpg"
+    3. onerror="...vi/VIDEO_ID/hqdefault.jpg"
+    Phir title aur badge bhi update karo!
+    ════════════════════════════════════════ -->
+
+  </div>
+
+  <!-- <div class="add-box reveal">
+    <h3>➕ Naya Video Add Karna Hai?</h3>
+    <p>
+      Upar ka VIDEO CARD BLOCK copy karo<br>
+      Aur sirf <code>TNbgYsMJXb4</code> ki jagah<br>
+      apna naya <code>YouTube Video ID</code> paste karo!<br>
+      Bas itna — thumbnail automatic aayega aur website pe play bhi hoga! 🎯
+    </p>
+  </div> -->
+</section>
+
+<div class="wave" style="background:#FFF3CC">
+  <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#FF6B00" d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z"/>
+  </svg>
+</div>
+
+<!-- FEATURES -->
+<section class="feat-section" id="features">
+  <span class="sec-title">Why Kids Love Funny Fuzz TV! ❤️</span>
+  <p class="sec-sub">Made with love for kids all around the world!</p>
+  <div class="feat-grid">
+    <div class="feat-card reveal"><span class="feat-icon">😂</span><div class="feat-title">Laugh Out Loud!</div><p class="feat-desc">Every video packed with hilarious moments that make kids burst out laughing!</p></div>
+    <div class="feat-card reveal"><span class="feat-icon">🌍</span><div class="feat-title">No Language Barrier!</div><p class="feat-desc">Pure visual comedy — kids from any country can enjoy without knowing any language!</p></div>
+    <div class="feat-card reveal"><span class="feat-icon">🛡️</span><div class="feat-title">100% Kids Safe!</div><p class="feat-desc">Every video carefully made for children. Parents can trust every single video!</p></div>
+    <div class="feat-card reveal"><span class="feat-icon">🎨</span><div class="feat-title">Stunning Animation!</div><p class="feat-desc">Beautiful Pixar-style 3D cartoon animation that kids absolutely love!</p></div>
+    <div class="feat-card reveal"><span class="feat-icon">🎵</span><div class="feat-title">Catchy Songs!</div><p class="feat-desc">Fun songs kids will be singing and humming all day long!</p></div>
+    <div class="feat-card reveal"><span class="feat-icon">📅</span><div class="feat-title">New Every Week!</div><p class="feat-desc">Fresh cartoon adventures uploaded regularly — always something new to watch!</p></div>
+  </div>
+</section>
+
+<div class="wave">
+  <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#FFF9E6" d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"/>
+  </svg>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat"><span class="stat-n">🎬</span><span class="stat-l">New Videos Weekly</span></div>
+  <div class="stat"><span class="stat-n">🌍</span><span class="stat-l">Global Audience</span></div>
+  <div class="stat"><span class="stat-n">😂</span><span class="stat-l">100% Funny</span></div>
+  <div class="stat"><span class="stat-n">🛡️</span><span class="stat-l">COPPA Safe</span></div>
+  <div class="stat"><span class="stat-n">🆓</span><span class="stat-l">Always Free</span></div>
+</div>
+
+<!-- SUBSCRIBE -->
+<section class="sub-band">
+  <div class="sub-animals"><span>🐻</span><span>🐰</span><span>🐱</span></div>
+  <h2 class="sub-title">Join The Funny Fuzz Family!</h2>
+  <p class="sub-desc">Subscribe now and never miss a single funny cartoon adventure!</p>
+  <a href="https://youtube.com/@FunnyFuzzTV" target="_blank" class="sub-btn">
+    <span class="bell">🔔</span> Subscribe — It's Free!
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">🐻🐰🐱 Funny Fuzz TV</div>
+  <p class="f-tag">LAUGH · WATCH · REPEAT</p>
+  <div class="f-links">
+    <a href="https://youtube.com/@FunnyFuzzTV" target="_blank">▶️ YouTube Channel</a>
+    <a href="#videos">🎬 Videos</a>
+    <a href="#features">⭐ About</a>
+    <a href="#">🛡️ Privacy Policy</a>
+    <a href="#">👶 Kids Safety</a>
+  </div>
+  <p class="f-copy">© 2025 Funny Fuzz TV · Made with ❤️ for kids worldwide!</p>
+</footer>
+
+<script>
+function playVideo(thumb, id) {
+  const card = thumb.closest('.video-card');
+  const iframe = card.querySelector('.yt-iframe');
+  thumb.style.display = 'none';
+  iframe.style.display = 'block';
+  iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+}
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80);
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal, .feat-card').forEach(el => obs.observe(el));
+
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow =
+    window.scrollY > 50 ? '0 8px 36px rgba(255,107,0,.5)' : '0 4px 24px rgba(255,107,0,.35)';
+});
+</script>
+</body>
+</html>
